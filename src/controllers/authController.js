@@ -19,6 +19,9 @@ export const signUp = async (req, res) => {
     });
     return res.status(201).json({ message: "User registered successfully!" });
   } catch (error) {
+    if (error.name === 'ValidationError') {
+      return res.status(400).json({ message: error.message });
+    }
     return res.status(500).json({ message: error.message });
   }
 };
