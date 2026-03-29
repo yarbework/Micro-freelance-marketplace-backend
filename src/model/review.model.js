@@ -32,16 +32,18 @@ const reviewSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-
-const Review = mongoose.model("Review", reviewSchema);
-Review.post("save", async function () {
+reviewSchema.post("save", async function () {
   await calculateAverageRating(this.reviewee);
 });
 
-Review.post("findOneAndDelete", async function (doc) {
+reviewSchema.post("findOneAndDelete", async function (doc) {
   if (doc) {
     await calculateAverageRating(doc.reviewee);
   }
-}); 
+});
+
+
+const Review = mongoose.model("Review", reviewSchema);
+ 
 
 export default Review;
