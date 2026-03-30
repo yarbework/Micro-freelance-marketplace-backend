@@ -12,12 +12,7 @@ const userProfileSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    email: {
-      type: String,
-      required: true,
-      trim: true,
-      lowercase: true,
-    },
+    
     bio: {
       type: String,
       trim: true,
@@ -30,7 +25,7 @@ const userProfileSchema = new mongoose.Schema(
     ],
     avatar: { 
         type: String, 
-        default: 'default-avatar.png' 
+        default: 'default-avatar.jpg' 
       },
     averageRating: { 
         type: Number, 

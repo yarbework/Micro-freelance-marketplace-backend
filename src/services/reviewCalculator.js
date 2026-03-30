@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import UserProfile from "../model/userProfile.model";
-import Review from "../model/review.model";
+import UserProfile from "../model/userProfile.model.js";
+import Review from "../model/review.model.js";
 
 export async function calculateAverageRating(revieweeId) {
   const result = await Review.aggregate([

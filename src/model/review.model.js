@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { calculateAverageRating } from "../services/reviewCalculator";
+import { calculateAverageRating } from "../services/reviewCalculator.js";
 
 const reviewSchema = new mongoose.Schema(
   {
