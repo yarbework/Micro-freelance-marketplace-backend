@@ -4,7 +4,7 @@ import { getGigs } from "../controllers/gig.controller.js";
 import { updateGig } from "../controllers/gig.controller.js";
 import { deleteGig } from "../controllers/gig.controller.js";
 import { getGigById } from "../controllers/gig.controller.js";
-import { authMiddleware } from "../middleware/auth.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
 
 const gigRouter = express.Router();
 

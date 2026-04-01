@@ -6,7 +6,7 @@ import {
   getMyApplications,
 } from "../controllers/application.controller.js";
 
-import authMiddleware from "../middlewares/auth.middleware.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 router.post("/gigs/:id/apply", authMiddleware, applyToGig);

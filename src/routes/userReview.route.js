@@ -4,7 +4,7 @@ import {
     getReviewsForUser , 
     updateReview , 
     deleteReview} from "../controllers/userReview.Controller.js";
-import { authMiddleware } from "../middleware/authMiddleware.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
 
 
 const router = express.Router();
