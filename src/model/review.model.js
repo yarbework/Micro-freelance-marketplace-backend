@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const applicationSchema = new mongoose.Schema(
+const reviewSchema = new mongoose.Schema(
   {
     gigId: {
       type: mongoose.Schema.Types.ObjectId,
@@ -34,6 +34,6 @@ const applicationSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Application = mongoose.model("Application", applicationSchema);
+const Review = mongoose.model("Review", reviewSchema);
 
-export default Application;
+export default Review;
